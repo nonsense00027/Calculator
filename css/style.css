@@ -1,0 +1,46 @@
+.result {
+  height: 40px;
+  font-size: 20px;
+  text-align: right;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.input {
+  height: 50px;
+  font-size: 40px;
+  text-align: right;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.histories {
+  font-size: 16px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  border: 1px solid #ececec;
+}
+
+.table-history {
+  text-align: right;
+}
+
+.history-label {
+  margin-right: 20px;
+  font-weight: bold;
+  text-align: left;
+  display: inline;
+}
+
+.history-list:hover {
+  cursor: pointer;
+}
+
+.btn {
+  height: 70px;
+}
+
+.clear:hover {
+  cursor: pointer;
+}
