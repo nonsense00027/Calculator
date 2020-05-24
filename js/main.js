@@ -120,8 +120,8 @@ class UI {
       total = total.substring(0, 16);
     }
     const [result, input, histories] = this.selectElements();
-    result.textContent = text;
-    input.textContent = total;
+    result.innerText = text;
+    input.innerText = total;
     this.addToHistory(total, text);
   }
 
@@ -265,6 +265,7 @@ clear.addEventListener("click", (e) => {
 const buttons = document.querySelectorAll(".btn");
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
+    button.blur();
     const content = button.innerText;
     if (
       content === "+" ||
@@ -300,3 +301,28 @@ buttons.forEach((button) => {
     }
   });
 });
+
+//NUMPAD FUNCTION
+
+window.onkeydown = function (ev) {
+  var e = ev || window.event,
+    key = e.keyCode;
+  if (e.location === 3) {
+    if (key === 96) UI.addInput(0);
+    else if (key === 97) UI.addInput(1);
+    else if (key === 98) UI.addInput(2);
+    else if (key === 99) UI.addInput(3);
+    else if (key === 100) UI.addInput(4);
+    else if (key === 101) UI.addInput(5);
+    else if (key === 102) UI.addInput(6);
+    else if (key === 103) UI.addInput(7);
+    else if (key === 104) UI.addInput(8);
+    else if (key === 105) UI.addInput(9);
+    else if (key === 110) UI.addInput(".");
+    else if (key === 106) UI.addResult("*");
+    else if (key === 107) UI.addResult("+");
+    else if (key === 109) UI.addResult("-");
+    else if (key === 111) UI.addResult("/");
+    else if (key === 13) UI.getResult();
+  }
+};
